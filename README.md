@@ -18,6 +18,23 @@
 
 	pip install -r requirements.txt
 
+### Tested on
+
+- Windows 7/8/8.1
+- Kali linux (subsystem)
+- Ubuntu (subsystem)
+ 
+### Download / Clone Repository
+
+You can download the latest version by cloning this GitHub repository.
+
+	git clone https://github.com/Ebryx/Scouter
+	
+## Usage
+- Please run `aws configure` before running the scripts
+- Each script is labelled with check name and needs to be executed manually
+- Place credentials report as `creds.csv` in the same directory of script while performing IAM checks
+
 ### IAM
 
 * [Orphan Users](https://github.com/Ebryx/Scouter/blob/master/IAM/orphanUsers.py)
