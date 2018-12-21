@@ -4,7 +4,7 @@
 [![python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/downloads/)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-**This repository maintains scripts for performing AWS SA (Security Assessment) checks which aren't performed by Scout2**
+**This repository maintains some of the scripts made by Ebryx DevSecOps team**
 
 ### Requirements
 
