@@ -64,3 +64,8 @@ You can download the latest version by cloning this GitHub repository.
 ### SNS
 
 * [Topics with HTTP protcol](https://github.com/Ebryx/Scouter/blob/master/SNS/topicsUtilizingHttpProtocol.py)
+
+### Note 
+<pre><code>Scripts will only run against resources specified by the region in `aws configure` (~/.aws/config)
+P.S ~ For Dependencies Issues -> <a href="https://github.com/Anon-Exploiter/SiteBroker/issues/4#issuecomment-421292969" target="_blank">Solution</a>
+</code></pre>
