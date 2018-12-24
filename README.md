@@ -20,7 +20,6 @@
 
 ### Tested on
 
-- Windows 7/8/8.1
 - Kali linux (subsystem)
 - Ubuntu (subsystem)
  
