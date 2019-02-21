@@ -64,6 +64,9 @@ You can download the latest version by cloning this GitHub repository.
 
 * [Topics with HTTP protcol](https://github.com/Ebryx/Scouter/blob/master/SNS/topicsUtilizingHttpProtocol.py)
 
+### Lambda
+* [Lambda Artifacts Collector](https://github.com/Ebryx/Scouter/blob/master/Lambda/lambdaArtifactsCollector.py)
+
 ### Note 
 <pre><code>• Scripts will only run against resources specified by the region in `aws configure` (~/.aws/config)
 • For Dependencies Issues -> <a href="https://github.com/Anon-Exploiter/SiteBroker/issues/4#issuecomment-421292969" target="_blank">Solution</a>
