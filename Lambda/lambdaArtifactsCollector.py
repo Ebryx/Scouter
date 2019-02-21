@@ -101,7 +101,7 @@ def main():
 		'USERNAME\|USER',
 		'PASSWORD\|PASS',
 	    'xox'               # Slack User's private token
-		# '[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]'
+		#'[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]'
 	]
 
 	print("[$] Alright World, Its time to take you on!")
