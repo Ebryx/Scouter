@@ -58,11 +58,10 @@ def returnLambdaFunctionAddress(functionName):
 
 def downloadLambdaFunction(path, functionName, functionAddr):
 	functionName 	= f"./data/downloads/{functionName}"
-	if not os.path.exists(functionName):
-		command 		= ['aria2c', '-s', '10', '-j', '10', '-x', '16', functionAddr, '-o', functionName]
-		_subp 			= subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-		out, err 		= _subp.communicate()
-		print(out.decode())
+	command 		= ['aria2c', '-s', '10', '-j', '10', '-x', '16', functionAddr, '-o', functionName]
+	_subp 			= subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	out, err 		= _subp.communicate()
+	print(out.decode())
 
 def getEnvVariables(apiCall):
 	logData('functionEnvs.csv', 'w+', 'Function Name,Data\n')
@@ -74,14 +73,14 @@ def getEnvVariables(apiCall):
 		if "Environment" in apiCall[count]:
 			if "Variables" in apiCall[count]['Environment']:
 				functionEnvs 	= apiCall[count]['Environment']['Variables']
-				logData('functionEnvs.csv', 'a+', f"{functionName},{functionEnvs}\n"); print(functionEnvs)
+				logData('functionEnvs.csv', 'a+', f"{functionName},{functionEnvs}\n"); print(functionName, functionEnvs)
 
 def parseFunctions(regexPatterns,  functionsPath):
 	logData('functionsParsedData.csv', 'w+', 'Function Name,Parsed Data\n')
 
 	for lambdaFunctions in os.listdir(functionsPath):
 		functions 	= f"{functionsPath}/{lambdaFunctions}"
-		print(f"[#] Analyzing {lambdaFunctions}\n")
+		print(f"[#] Analyzing {lambdaFunctions}")
 
 		for patterns in regexPatterns:
 			command 	= ["zipgrep", "-HE", patterns, functions]
@@ -93,14 +92,16 @@ def parseFunctions(regexPatterns,  functionsPath):
 				print(out)
 				logData('functionsParsedData.csv', 'a+', f'{lambdaFunctions},{out}\n')
 
+	print()
+
 def main():
 	regexPatterns = [
 		'AKIA',             # For finding access keys
 		'Slacker',
 		'USERNAME\|USER',
 		'PASSWORD\|PASS',
-    'xox'               # Slack User's private token
-		'[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]'
+	    'xox'               # Slack User's private token
+		# '[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]:[[:xdigit:]][[:xdigit:]]'
 	]
 
 	print("[$] Alright World, Its time to take you on!")
@@ -113,12 +114,14 @@ def main():
 	getEnvVariables(apiCall); print()
 	
 	for functions in json.loads(lambdaFunctions):
-		functionAddr 	= returnLambdaFunctionAddress(functions)
-		downloadLambdaFunction(path, functions, functionAddr)
+		functionName 	= f"./data/downloads/{functions}"
+		
+		if not os.path.exists(functionName):
+			functionAddr 	= returnLambdaFunctionAddress(functions)
+			downloadLambdaFunction(path, functions, functionAddr)
 	
 	parseFunctions(regexPatterns, f"./data/downloads/")
 
 if __name__ == '__main__':
 	main()
-
 
