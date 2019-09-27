@@ -50,6 +50,29 @@ You can download the latest version by cloning this GitHub repository.
 * [Unused KeyPairs](https://github.com/Ebryx/Scouter/blob/master/EC2/unusedKeyPairs.py)
 * [Unused EIPs](https://github.com/Ebryx/Scouter/blob/master/EC2/unusedKeyPairs.py)
 * [Instances without termination protection](https://github.com/Ebryx/Scouter/blob/master/EC2/instancesWithoutTerminationProtection.py)
+* [Instances with(out) Detailed Monitoring Enabled](https://github.com/Ebryx/Scouter/blob/master/EC2/detailedMonitoring.py)
+* [Instances with(out) tags](https://github.com/Ebryx/Scouter/blob/master/EC2/taggedInstances.py)
+
+### VPC
+
+* [VPCs with(out) Flow Logs](https://github.com/Ebryx/Scouter/blob/master/VPC/vpcFlowLogs.py)
+
+### RDS
+
+* [Instances publicly exposed](https://github.com/Ebryx/Scouter/blob/master/RDS/publicRDSInstances.py)
+
+### Redshift
+
+* [Clusters publicly exposed](https://github.com/Ebryx/Scouter/blob/master/Redshift/publicRedshiftClusters.py)
+
+### Cloudformation
+
+* [Stack Termination Protection](https://github.com/Ebryx/Scouter/blob/master/Cloudformation/stackTerminationProtection.py)
+
+### Cloudtrail
+
+* [Trail buckets without MFA Deletion Protection](https://github.com/Ebryx/Scouter/blob/master/Cloudtrail/bucketMfaDeletionProtection.py)
+* [Trail buckets without Access Logging Enabled](https://github.com/Ebryx/Scouter/blob/master/Cloudtrail/bucketLoggingAccess.py)
 
 ### ElasticBeanStalk
 
@@ -63,6 +86,7 @@ You can download the latest version by cloning this GitHub repository.
 ### SNS
 
 * [Topics with HTTP protcol](https://github.com/Ebryx/Scouter/blob/master/SNS/topicsUtilizingHttpProtocol.py)
+* [Publicly Exposed Topics](https://github.com/Ebryx/Scouter/blob/master/SNS/publiclyExposedTopics.py)
 
 ### Lambda
 * [Lambda Artifacts Collector](https://github.com/Ebryx/Scouter/blob/master/Lambda/lambdaArtifactsCollector.py)
