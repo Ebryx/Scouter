@@ -1,2 +1,5 @@
 awscli
 pygments
+boto3
+botocore
+jmespath
