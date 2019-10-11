@@ -13,7 +13,7 @@ def list_buckets():
 def getTemplateContents(buckets):
 	"""
 	Fetching contents of ElasticBeanStalk's templates 
-	"""
+	""" 
 
 	appName 	= []
 	tempList 	= []
