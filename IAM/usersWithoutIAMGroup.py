@@ -7,7 +7,7 @@ filename 	= 'IAM_users_without_any_groups.csv'
 
 def writeIntoFile(filename, stdout, method='w+'):
 	with open(filename, method) as f: f.write(stdout)
-
+ 
 def getUsersGroups(username):
 	user 		= username['UserName']
 	creationD 	= username['CreateDate'].split("T")[0]
