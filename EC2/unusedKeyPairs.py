@@ -15,7 +15,7 @@ def fetchDetailsOfKeyPair(keypair):
 
 	if len(out) == 0:
 		print("[!] Not attached with any instance\n")
-		writeIntoFile(filename, keypairs + "\n", method='a+')
+		writeIntoFile(filename, keypair + "\n", method='a+')
 
 	else:
 		print("[#] Attached with {}\n".format(str(out)))
