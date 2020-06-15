@@ -22,14 +22,18 @@ def listCloudtrailBuckets(clientApiCall):
 	print("[#] Bucket Name\t ~ Access Logging\t ~ Trail Name\t ~ Trail ARN")
 
 	for name, arn, _bucketName in zip(trailName, trailARN, bucketName):
-		mfaDeletion 	= boto3.client('s3').get_bucket_logging(Bucket=_bucketName)
-		deletionStatus 	= parseJson('Status', mfaDeletion)
-		
-		if deletionStatus == None:
-			print(f"[!] {_bucketName}\t ~ Not Enabled\t ~ {name}\t ~ {arn}")
+		try:
+			mfaDeletion 	= boto3.client('s3').get_bucket_logging(Bucket=_bucketName)
+			deletionStatus 	= parseJson('Status', mfaDeletion)
+			
+			if deletionStatus == None:
+				print(f"[!] {_bucketName}\t ~ {deletionStatus}\t ~ {name}\t ~ {arn}")
 
-		else:
-			print(f"[#] {_bucketName}\t ~ {deletionStatus}\t ~ {name}\t ~ {arn}")
+			else:
+				print(f"[#] {_bucketName}\t ~ {deletionStatus}\t ~ {name}\t ~ {arn}")
+
+		except botocore.exceptions.ClientError:
+			print(f"[!!!] {_bucketName}\t ~ {name}\t ~ {arn} -- Access Denied")
 
 def main():
 	clientCall 	= authorizedClientCall()
