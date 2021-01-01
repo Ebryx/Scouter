@@ -16,9 +16,9 @@ def topicsList(clientApiCall):
 def getTopicsAttrs(topics, clientApiCall):
 	topicAttrs 	= clientApiCall.get_topic_attributes(TopicArn=topics)
 	policy 		= json.loads(parseJson('Attributes.Policy', topicAttrs))
-	principal 	= parseJson('Statement[*].Principal', policy)
+	principal 	= parseJson('Statement[*]', policy)
 
-	print(f"[#] {topics} -~> {principal}")
+	print(f"[#] {topics} -~> {json.dumps(principal, indent=4)}")
 
 def main():
 	clientCall 	= boto3.client("sns")
