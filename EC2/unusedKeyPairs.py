@@ -14,10 +14,12 @@ def fetchDetailsOfKeyPair(keypair):
 	out 		= json.loads(out)
 
 	if len(out) == 0:
+		print(keypair)
 		print("[!] Not attached with any instance\n")
 		writeIntoFile(filename, keypair + "\n", method='a+')
 
 	else:
+		print(keypair)
 		print("[#] Attached with {}\n".format(str(out)))
 
 def main():
