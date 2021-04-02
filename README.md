@@ -43,6 +43,7 @@ You can download the latest version by cloning this GitHub repository.
 ### S3
 
 * [ServerSide Encryption](https://github.com/Ebryx/Scouter/blob/master/S3/serverSideEncryption.py)
+* [MFA deletion protection](https://github.com/Ebryx/Scouter/blob/master/S3/bucketsMFADeletion.py)
 
 ### EC2
 
