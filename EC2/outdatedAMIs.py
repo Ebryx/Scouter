@@ -19,7 +19,7 @@ def describeAMIsDuration(ec2Client, dateToday, fileName, daysToCheck):
 	images 		= json.loads(json.dumps(descImg))['Images']
 
 	for instanceDetails in images:
-		imageId 			= instanceDetails['ImageId']
+		imageId 		= instanceDetails['ImageId']
 		instanceName 		= instanceDetails['Name']
 		ebsVolumeEncryption	= instanceDetails['BlockDeviceMappings'][0]['Ebs']['Encrypted']
 		creationDate 		= instanceDetails['CreationDate']
