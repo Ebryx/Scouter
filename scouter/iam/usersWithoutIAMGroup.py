@@ -1,6 +1,5 @@
 import subprocess
 import json
-import os
 import concurrent.futures
 
 filename 	= 'IAM_users_without_any_groups.csv'

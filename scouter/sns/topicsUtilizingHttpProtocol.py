@@ -1,7 +1,5 @@
-from pygments import highlight, lexers, formatters
 import subprocess
 import json
-import re
 
 ###############
 ## User Input

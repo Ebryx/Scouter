@@ -1,7 +1,6 @@
 from pygments import highlight, lexers, formatters
 import subprocess
 import json
-import re
 import concurrent.futures
 
 fileName 	= "KMS_exposed_keys.d"

@@ -1,8 +1,5 @@
-from datetime import datetime
 import subprocess
-import os
 import json
-import re
 import concurrent.futures
 
 fileName 	= "EC2_Instances_Without_Termination_Protection.csv"

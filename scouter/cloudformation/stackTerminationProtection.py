@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 from jmespath import search as queryJson
-import botocore
 import boto3
-import json
 import concurrent.futures
 
 fileName 	= "Cloudformation_Stacks_without_TerminationProtection.csv"

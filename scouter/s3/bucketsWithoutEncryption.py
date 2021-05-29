@@ -1,8 +1,5 @@
-from botocore.exceptions import ClientError
-
 import concurrent.futures
 import boto3
-import json
 
 FILENAME 	= "S3_Buckets_Without_Encryption.csv"
 PROCESSES 	= 50

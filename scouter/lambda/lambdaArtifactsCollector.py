@@ -17,7 +17,6 @@ Dependencies:
 
 import subprocess
 import json
-import sys
 import os
 
 def createDirs(path):

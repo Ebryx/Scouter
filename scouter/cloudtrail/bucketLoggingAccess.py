@@ -3,7 +3,6 @@
 from jmespath import search as queryJson
 import botocore
 import boto3
-import json
 
 fileName 	= "bucketsWithoutLoggingAccess.csv"
 

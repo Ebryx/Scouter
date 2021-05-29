@@ -1,5 +1,3 @@
-from botocore.exceptions import ClientError
-
 import concurrent.futures
 import boto3
 import json

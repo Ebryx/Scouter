@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 from jmespath import search as queryJson
-import botocore
 import boto3
 import json
 

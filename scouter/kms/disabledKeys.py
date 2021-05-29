@@ -1,6 +1,5 @@
 import subprocess
 import json
-import re
 import concurrent.futures
 
 fileName 	= "KMS_disabled_keys.csv"

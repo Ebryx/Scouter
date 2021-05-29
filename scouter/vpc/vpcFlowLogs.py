@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 from jmespath import search as queryJson
-import botocore
 import boto3
-import json
 
 def parseJson(query, jsonObj):
 	return(queryJson(query, jsonObj))
